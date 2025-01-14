@@ -23,19 +23,18 @@ namespace SportApp.Data
 
         public static User1Entities GetContext()
         {
-            if(_context == null)
+            if (_context == null)
             {
                 _context = new User1Entities();
             }
             return _context;
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TypeInsert> TypeInsert { get; set; }
         public virtual DbSet<UserGender> UserGender { get; set; }
         public virtual DbSet<UserRole> UserRole { get; set; }

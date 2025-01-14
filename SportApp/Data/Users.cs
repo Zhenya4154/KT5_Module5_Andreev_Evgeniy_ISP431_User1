@@ -21,8 +21,8 @@ namespace SportApp.Data
         public string Login { get; set; }
         public string Password { get; set; }
         public string NumberPhone { get; set; }
-        public int SeriaPass { get; set; }
-        public int NumberPass { get; set; }
+        public Nullable<int> SeriaPass { get; set; }
+        public Nullable<int> NumberPass { get; set; }
         public System.DateTime BirthdayDate { get; set; }
         public string LastInsert { get; set; }
         public Nullable<int> IdTypeInsert { get; set; }

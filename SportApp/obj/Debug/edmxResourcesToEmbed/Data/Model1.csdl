@@ -1,15 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="User1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <EntityType Name="TypeInsert">
     <Key>
       <PropertyRef Name="Id" />
@@ -38,15 +28,15 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IdRole" Type="Int32" Nullable="false" />
     <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="NumberPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="SeriaPass" Type="Int32" Nullable="false" />
-    <Property Name="NumberPass" Type="Int32" Nullable="false" />
+    <Property Name="SeriaPass" Type="Int32" />
+    <Property Name="NumberPass" Type="Int32" />
     <Property Name="BirthdayDate" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="LastInsert" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="IdTypeInsert" Type="Int32" />
@@ -92,7 +82,6 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="User1Entities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="TypeInsert" EntityType="Self.TypeInsert" />
     <EntitySet Name="UserGender" EntityType="Self.UserGender" />
     <EntitySet Name="UserRole" EntityType="Self.UserRole" />

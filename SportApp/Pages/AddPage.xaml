@@ -25,8 +25,8 @@
             <Label Content="Дата рождения:" FontSize="20"></Label>
             <DatePicker x:Name="BirthdayDatePicker"></DatePicker>
             <Label Content="Номер телефона" FontSize="20"></Label>
-            <TextBox x:Name="NumberPhone" HorizontalContentAlignment="Center"
-                     VerticalContentAlignment="Center"></TextBox>
+            <TextBox x:Name="NumberPhone" Text="+7(" HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center" MaxLength="19"></TextBox>
             <Label Content="Пол:" FontSize="20"></Label>
             <ComboBox x:Name="GenderCombobox" HorizontalContentAlignment="Center"
                       VerticalContentAlignment="Center" DisplayMemberPath="Gender"></ComboBox>
@@ -42,10 +42,10 @@
                      VerticalContentAlignment="Center"></TextBox>
             <Label Content="Пароль:" FontSize="20"></Label>
             <PasswordBox x:Name="PasswordTextBox" HorizontalContentAlignment="Center"
-                     VerticalContentAlignment="Center"></PasswordBox>
+                     VerticalContentAlignment="Center" MaxLength="8"></PasswordBox>
             <Label Content="Подтверждение пароля:" FontSize="20"></Label>
             <PasswordBox x:Name="ConfirmPasswordBox" HorizontalContentAlignment="Center"
-                         VerticalContentAlignment="Center"></PasswordBox>
+                         VerticalContentAlignment="Center" MaxLength="8"></PasswordBox>
             <Button x:Name="AddButton" Content="Добавить" Click="AddButton_Click" Margin="10"></Button>
             <Button x:Name="BackButton" Content="Назад" Click="BackButton_Click"></Button>
         </StackPanel>
